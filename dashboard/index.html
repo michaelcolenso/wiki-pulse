@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WikiPulse – The Daily Edition</title>
+<meta name="description" content="What the world is reading right now. Daily Wikipedia pageview spike report.">
+<meta property="og:title" content="WikiPulse — The Daily Edition">
+<meta property="og:description" content="Today's Wikipedia pageview spikes, in broadsheet form.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fdfaf4;
+    --paper-warm: #f7f3eb;
+    --ink: #1a1817;
+    --ink-soft: #3d3a38;
+    --ink-dim: #787570;
+    --ink-faint: #b5b0a8;
+    --rule: #d9d3c7;
+    --rule-light: #e8e3da;
+    --red: #c41e3a;
+    --red-bg: rgba(196, 30, 58, 0.06);
+    --navy: #1e3a5f;
+    --navy-bg: rgba(30, 58, 95, 0.05);
+    --amber: #9a5d0e;
+    --amber-bg: rgba(154, 93, 14, 0.05);
+    --green: #2d6a4f;
+    --col-gap: 24px;
+    --max-w: 1080px;
+    --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    background: var(--paper);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink-soft);
+    line-height: 1.6;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(180, 170, 150, 0.015) 2px,
+        rgba(180, 170, 150, 0.015) 4px
+      );
+    min-height: 100vh;
+  }
+
+  /* ═══════════════════════════════════════
+     NAMEPLATE
+     ═══════════════════════════════════════ */
+  .nameplate {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 32px 28px 0;
+    text-align: center;
+  }
+
+  .nameplate-rule {
+    border: none;
+    border-top: 3px double var(--rule);
+    margin: 0 auto;
+    max-width: var(--max-w);
+  }
+
+  .nameplate h1 {
+    font-family: var(--serif);
+    font-size: clamp(42px, 8vw, 72px);
+    font-weight: 900;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .nameplate .tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-dim);
+    letter-spacing: 0.3px;
+  }
+
+  /* ═══════════════════════════════════════
+     DATELINE
+     ═══════════════════════════════════════ */
+  .dateline {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 14px 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+  }
+
+  .dateline .edition {
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0.3px;
+  }
+
+  .dateline-rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 8px 28px 0;
+    max-width: calc(var(--max-w) - 56px);
+  }
+
+  .dateline-rule.thick {
+    border-top-width: 2px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-w);
+    padding: 0 28px;
+  }
+
+  /* ═══════════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════════ */
+  .main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 28px 28px 64px;
+  }
+
+  .loading-edition {
+    text-align: center;
+    padding: 80px 24px;
+    color: var(--ink-dim);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  .loading-edition .press {
+    display: inline-block;
+    animation: press 2s ease-in-out infinite;
+  }
+
+  @keyframes press {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  .empty-edition {
+    text-align: center;
+    padding: 80px 24px;
+  }
+
+  .empty-edition .fleur {
+    font-size: 32px;
+    color: var(--ink-faint);
+    margin-bottom: 16px;
+  }
+
+  .empty-edition p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-dim);
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════════════
+     STATS BAR
+     ═══════════════════════════════════════ */
+  .stats-bar {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+    padding: 14px 0;
+  }
+
+  .stat {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  .stat:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: var(--rule);
+  }
+
+  .stat .number {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+
+  .stat .number.red  { color: var(--red); }
+  .stat .number.navy { color: var(--navy); }
+  .stat .number.amber { color: var(--amber); }
+  .stat .number.ink  { color: var(--ink); }
+
+  .stat .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--ink-dim);
+    font-weight: 500;
+  }
+
+  /* ═══════════════════════════════════════
+     HERO SPIKE — above the fold
+     ═══════════════════════════════════════ */
+  .hero {
+    margin-bottom: 44px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hero .kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .hero .headline {
+    font-family: var(--serif);
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+  }
+
+  .hero .headline a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .hero .headline a:hover {
+    color: var(--red);
+  }
+
+  .hero .deck {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-style: italic;
+    color: var(--ink-dim);
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  .hero .blurb {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    text-wrap: pretty;
+    max-width: 68ch;
+  }
+
+  .hero .byline {
+    display: flex;
+    gap: 24px;
+    font-size: 12px;
+    color: var(--ink-dim);
+    flex-wrap: wrap;
+  }
+
+  .hero .byline span {
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+
+  .hero .byline .views-hero {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ═══════════════════════════════════════
+     SECTION HEADER
+     ═══════════════════════════════════════ */
+  .section-head {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ink);
+    display: inline-block;
+  }
+
+  /* ═══════════════════════════════════════
+     SPIKE GRID — 3-column broadsheet
+     ═══════════════════════════════════════ */
+  .spike-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--col-gap);
+    margin-bottom: 44px;
+  }
+
+  .story {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule-light);
+    break-inside: avoid;
+  }
+
+  .story .story-kicker {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .story .story-kicker.red   { color: var(--red); }
+  .story .story-kicker.navy  { color: var(--navy); }
+  .story .story-kicker.amber { color: var(--amber); }
+
+  .story .story-head {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+    letter-spacing: -0.1px;
+    margin-bottom: 6px;
+  }
+
+  .story .story-head a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .story .story-head a:hover {
+    color: var(--red);
+  }
+
+  .story .story-deck {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink-dim);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .story .story-meta {
+    font-size: 11px;
+    color: var(--ink-dim);
+    display: flex;
+    gap: 12px;
+  }
+
+  .story .story-meta .views {
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+
+  @media (min-width: 681px) {
+    .spike-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .spike-grid.cols-1 { grid-template-columns: 1fr; }
+  }
+
+  /* ═══════════════════════════════════════
+     HISTORY — "From the Archives"
+     ═══════════════════════════════════════ */
+  .archives { margin-bottom: 44px; }
+
+  .archive-list {
+    list-style: none;
+    border-top: 1px solid var(--rule);
+  }
+
+  .archive-item {
+    display: grid;
+    grid-template-columns: 90px 1fr 90px 52px;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule-light);
+    font-size: 13px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+
+  .archive-item:hover {
+    background: var(--paper-warm);
+    margin: 0 -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+  }
+
+  .archive-header {
+    display: grid;
+    grid-template-columns: 90px 1fr 90px 52px;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--ink-dim);
+    font-weight: 600;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .archive-date { color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+  .archive-title { color: var(--ink); font-weight: 500; }
+  .archive-views { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .archive-spike { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .archive-spike.red   { color: var(--red); }
+  .archive-spike.navy  { color: var(--navy); }
+  .archive-spike.amber { color: var(--amber); }
+
+  /* ═══════════════════════════════════════
+     COLOPHON
+     ═══════════════════════════════════════ */
+  .colophon {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 3px double var(--rule);
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink-dim);
+    line-height: 1.8;
+  }
+
+  .colophon a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .colophon a:hover {
+    color: var(--ink);
+    border-color: var(--ink-dim);
+  }
+
+  .colophon .sep { margin: 0 10px; color: var(--ink-faint); }
+
+  .colophon .motto {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-bottom: 10px;
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════ */
+  @media (max-width: 680px) {
+    .nameplate { padding: 24px 18px 0; }
+    .nameplate h1 { font-size: 36px; }
+    .dateline { padding: 10px 18px 0; font-size: 10.5px; flex-direction: column; gap: 2px; align-items: flex-start; }
+    .dateline-rule { margin: 6px 18px 0; }
+    .main { padding: 20px 18px 48px; }
+    .stats-bar { flex-wrap: wrap; }
+    .stat { flex: 0 0 50%; padding: 10px 0; }
+    .stat:nth-child(2)::after { display: none; }
+    .stat .number { font-size: 26px; }
+    .hero .headline { font-size: 24px; }
+    .hero .deck { font-size: 15px; }
+    .spike-grid { grid-template-columns: 1fr; gap: 0; }
+    .archive-item, .archive-header { grid-template-columns: 75px 1fr 55px; }
+    .archive-header .archive-spike, .archive-item .archive-spike { display: none; }
+  }
+
+  @media (max-width: 400px) {
+    .stats-bar { flex-direction: column; }
+    .stat { flex: 1; }
+    .stat:not(:last-child)::after { display: none; }
+    .stat:not(:last-child) { border-bottom: 1px solid var(--rule-light); }
+  }
+
+  /* ═══════════════════════════════════════
+     STOP PRESS — live edit-burst monitor
+     ═══════════════════════════════════════ */
+  .stop-press {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .stop-press-inner {
+    border: 2px solid var(--red);
+    border-left: none;
+    border-right: none;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    overflow: hidden;
+    background: var(--red-bg);
+  }
+
+  .stop-press-badge {
+    background: var(--red);
+    color: var(--paper);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 3px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .stop-press-badge.quiet {
+    background: var(--ink-dim);
+  }
+
+  .stop-press-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--red);
+    flex-shrink: 0;
+    animation: blink 1s ease-in-out infinite;
+  }
+
+  .stop-press-dot.quiet {
+    background: var(--ink-dim);
+    animation: none;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  .stop-press-ticker {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .stop-press-ticker-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: ticker-scroll 60s linear infinite;
+  }
+
+  .stop-press-ticker-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .stop-press-ticker a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: var(--serif);
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .stop-press-ticker a:hover { color: var(--red); }
+
+  .stop-press-ticker .sep {
+    color: var(--ink-faint);
+    margin: 0 12px;
+  }
+
+  .stop-press-ticker .edit-count {
+    font-weight: 400;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-dim);
+  }
+
+  .stop-press-ticker .tier-tag {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 1px 5px;
+    margin-left: 4px;
+  }
+
+  .stop-press-ticker .tier-tag.high  { color: var(--red); }
+  .stop-press-ticker .tier-tag.med   { color: var(--navy); }
+  .stop-press-ticker .tier-tag.low   { color: var(--amber); }
+
+  .stop-press-none {
+    color: var(--ink-dim);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="nameplate">
+  <h1>WikiPulse</h1>
+  <p class="tagline">All the News That's Fit to Spike</p>
+</div>
+<hr class="nameplate-rule">
+
+<div class="dateline">
+  <span id="report-date">Loading…</span>
+  <span class="edition">The Daily Edition</span>
+</div>
+<hr class="dateline-rule">
+
+<!-- STOP PRESS — Live Edit-Burst Monitor -->
+<div class="stop-press" id="stop-press">
+  <div class="stop-press-inner">
+    <div class="stop-press-dot quiet" id="sp-dot"></div>
+    <div class="stop-press-badge quiet" id="sp-badge">WIRE QUIET</div>
+    <div class="stop-press-ticker" id="sp-ticker">
+      <span class="stop-press-none">No unusual editing activity detected.</span>
+    </div>
+  </div>
+</div>
+
+<main class="main" id="main-content">
+  <div class="loading-edition">
+    <span class="press">The presses are running…</span>
+  </div>
+</main>
+
+<footer class="colophon">
+  <p class="motto">"Wikipedia knows what matters before the headlines do."</p>
+  <p>
+    Data from <a href="https://wikimedia.org/api/rest_v1/" target="_blank" rel="noopener">Wikimedia REST API</a>
+    <span class="sep">·</span>
+    <a href="https://github.com/michaelcolenso/wiki-pulse" target="_blank" rel="noopener">GitHub</a>
+    <span class="sep">·</span>
+    Updated daily
+  </p>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+  return String(n);
+}
+
+function tier(x) {
+  if (x >= 25) return 'red';
+  if (x >= 8)  return 'navy';
+  return 'amber';
+}
+
+function tierLabel(t) {
+  if (t === 'red')   return 'Massive Spike';
+  if (t === 'navy')  return 'Breaking Spike';
+  return 'Notable Spike';
+}
+
+function tierArticle(t) {
+  if (t === 'red')   return 'A';
+  if (t === 'navy')  return 'The';
+  return 'An';
+}
+
+function tierKicker(t) {
+  if (t === 'red')   return 'Extra';
+  if (t === 'navy')  return 'Breaking';
+  return 'Notable';
+}
+
+// Fetch Wikipedia summary (description + extract) for a single article
+async function fetchWikiSummary(article) {
+  try {
+    const url = 'https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(article);
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return {
+      description: data.description || '',
+      extract: data.extract || ''
+    };
+  } catch (e) {
+    return null;
+  }
+}
+
+// Fetch summaries for all spikes (batched, avoid rate limiting)
+async function fetchAllSummaries(spikes) {
+  const summaries = {};
+  const batch = async (items) => {
+    for (const s of items) {
+      const wiki = await fetchWikiSummary(s.article);
+      if (wiki) summaries[s.article] = wiki;
+    }
+  };
+  await batch(spikes);
+  return summaries;
+}
+
+// ── Stop Press: poll realtime.json for live edit bursts ──
+async function refreshStopPress() {
+  try {
+    const res = await fetch('realtime.json?v=' + Date.now());
+    if (!res.ok) return;
+    const data = await res.json();
+    const bursts = data.bursts || [];
+
+    const dot = document.getElementById('sp-dot');
+    const badge = document.getElementById('sp-badge');
+    const ticker = document.getElementById('sp-ticker');
+
+    if (bursts.length === 0) {
+      dot.className = 'stop-press-dot quiet';
+      badge.className = 'stop-press-badge quiet';
+      badge.textContent = 'WIRE QUIET';
+      ticker.innerHTML = '<span class="stop-press-none">No unusual editing activity detected.</span>';
+      return;
+    }
+
+    // Active bursts — fire up the wire
+    const topTier = bursts[0].tier;
+    dot.className = 'stop-press-dot';
+    badge.className = 'stop-press-badge';
+    badge.textContent = bursts.length + ' ACTIVE';
+
+    const tierTag = (t) => {
+      if (t === 'high') return '<span class="tier-tag high">MASSIVE</span>';
+      if (t === 'med') return '<span class="tier-tag med">SURGE</span>';
+      return '<span class="tier-tag low">WARM</span>';
+    };
+
+    ticker.innerHTML = '<div class="stop-press-ticker-track">' +
+      bursts.map(b =>
+        '<a href="' + b.article_url + '" target="_blank" rel="noopener">' +
+          b.article +
+        '</a>' + tierTag(b.tier) +
+        ' <span class="edit-count">' + b.edits_15m + ' edits</span>'
+      ).join('<span class="sep">|</span>') +
+      '<span class="sep">|</span>' +  // separator between loops
+      bursts.map(b =>
+        '<a href="' + b.article_url + '" target="_blank" rel="noopener">' +
+          b.article +
+        '</a>' + tierTag(b.tier) +
+        ' <span class="edit-count">' + b.edits_15m + ' edits</span>'
+      ).join('<span class="sep">|</span>') +
+    '</div>';
+  } catch (e) {
+    // realtime.json not available yet — that's fine
+  }
+}
+
+async function load() {
+  const app = document.getElementById('main-content');
+  let spikes = { date: '', spikes: [] };
+  let history = { history: [] };
+
+  try {
+    const [sRes, hRes] = await Promise.all([
+      fetch('spikes.json?v=' + Date.now()),
+      fetch('history.json?v=' + Date.now())
+    ]);
+    if (sRes.ok) spikes = await sRes.json();
+    if (hRes.ok) history = await hRes.json();
+  } catch (e) {
+    app.innerHTML =
+      '<div class="empty-edition">' +
+        '<div class="fleur">❧</div>' +
+        '<p>No data yet. The presses need a few days to build a baseline. Check back tomorrow.</p>' +
+      '</div>';
+    return;
+  }
+
+  document.getElementById('report-date').textContent = spikes.date || 'No date';
+
+  // Fetch Wikipedia summaries for all spikes (background, non-blocking after first render)
+  const summariesPromise = fetchAllSummaries(spikes.spikes);
+
+  const high = spikes.spikes.filter(s => s.spike_tier === 'high');
+  const med  = spikes.spikes.filter(s => s.spike_tier === 'med');
+  const low  = spikes.spikes.filter(s => s.spike_tier === 'low');
+
+  let html = '';
+
+  html += '<div class="stats-bar">' +
+    '<div class="stat"><div class="number red">' + high.length + '</div><div class="label">Massive ≥25×</div></div>' +
+    '<div class="stat"><div class="number navy">' + med.length + '</div><div class="label">Breaking ≥8×</div></div>' +
+    '<div class="stat"><div class="number amber">' + low.length + '</div><div class="label">Notable ≥3×</div></div>' +
+    '<div class="stat"><div class="number ink">' + spikes.spikes.length + '</div><div class="label">Total Signals</div></div>' +
+  '</div>';
+
+  if (spikes.spikes.length === 0) {
+    html +=
+      '<div class="empty-edition">' +
+        '<div class="fleur">❧</div>' +
+        '<p>No anomalous pageview spikes detected today. A slow news day.</p>' +
+      '</div>';
+  } else {
+    const hero = spikes.spikes[0];
+    const hTier = tier(hero.spike_multiple);
+    html += '<div class="hero">' +
+      '<div class="kicker">' + tierKicker(hTier) + '</div>' +
+      '<div class="headline"><a href="' + hero.article_url + '" target="_blank" rel="noopener">' + hero.article + '</a></div>' +
+      '<div class="deck">' +
+        tierArticle(hTier) + ' <strong>' + hero.spike_multiple + '×</strong> surge — ' +
+        hero.views_fmt + ' readers today, compared to a typical ~' + fmt(hero.baseline_30d) +
+        '. Wikipedia editors are scrambling.' +
+      '</div>' +
+      '<div class="blurb" id="hero-blurb"><em>Loading context…</em></div>' +
+      '<div class="byline">' +
+        '<span class="views-hero">' + hero.views_fmt + ' views</span>' +
+        '<span>Rank #' + hero.rank + ' today</span>' +
+        '<span>Baseline ~' + fmt(hero.baseline_30d) + '/day</span>' +
+        '<span>' + hero.spike_multiple + '× normal</span>' +
+      '</div>' +
+    '</div>';
+
+    const rest = spikes.spikes.slice(1);
+    if (rest.length > 0) {
+      const colClass = rest.length <= 2 ? 'cols-' + rest.length : '';
+      html += '<div class="section-head">Also Spiking Today</div>';
+      html += '<div class="spike-grid ' + colClass + '">';
+      for (let i = 0; i < rest.length; i++) {
+        const s = rest[i];
+        const t = tier(s.spike_multiple);
+        html += '<div class="story">' +
+          '<div class="story-kicker ' + t + '">' + tierLabel(t) + '</div>' +
+          '<div class="story-head"><a href="' + s.article_url + '" target="_blank" rel="noopener">' + s.article + '</a></div>' +
+          '<div class="story-deck" id="story-blurb-' + i + '"><em>Loading…</em></div>' +
+          '<div class="story-meta">' +
+            '<span class="views">' + s.views_fmt + ' today</span>' +
+            '<span>~' + fmt(s.baseline_30d) + ' avg · ' + s.spike_multiple + '× baseline</span>' +
+          '</div>' +
+        '</div>';
+      }
+      html += '</div>';
+    }
+  }
+
+  if (history.history.length > 0) {
+    html += '<div class="archives">' +
+      '<div class="section-head">From the Archives</div>' +
+      '<div class="archive-header">' +
+        '<div>Date</div><div>Article</div><div style="text-align:right">Views</div><div class="archive-spike" style="text-align:right">Spike</div>' +
+      '</div>' +
+      '<div class="archive-list">';
+    let lastDate = '';
+    for (const h of history.history) {
+      const dateDisplay = h.date === lastDate ? '' : h.date;
+      lastDate = h.date;
+      const t = tier(h.spike_multiple);
+      html += '<a class="archive-item" href="' + h.article_url + '" target="_blank" rel="noopener">' +
+        '<div class="archive-date">' + dateDisplay + '</div>' +
+        '<div class="archive-title">' + h.article + '</div>' +
+        '<div class="archive-views">' + h.views_fmt + '</div>' +
+        '<div class="archive-spike ' + t + '">' + h.spike_multiple + '×</div>' +
+      '</a>';
+    }
+    html += '</div></div>';
+  }
+
+  app.innerHTML = html;
+
+  // Populate Wikipedia blurbs after summaries load
+  if (spikes.spikes.length > 0) {
+    summariesPromise.then(summaries => {
+      // Hero blurb
+      const hero = spikes.spikes[0];
+      const heroSum = summaries[hero.article];
+      const heroBlurb = document.getElementById('hero-blurb');
+      if (heroBlurb && heroSum && heroSum.extract) {
+        heroBlurb.textContent = heroSum.extract;
+      } else if (heroBlurb && heroSum && heroSum.description) {
+        heroBlurb.textContent = heroSum.description;
+      } else if (heroBlurb) {
+        heroBlurb.textContent = '';
+      }
+
+      // Story cards
+      const rest = spikes.spikes.slice(1);
+      for (let i = 0; i < rest.length; i++) {
+        const sum = summaries[rest[i].article];
+        const el = document.getElementById('story-blurb-' + i);
+        if (el && sum) {
+          el.textContent = sum.description || sum.extract?.substring(0, 120) || '';
+          el.style.fontStyle = 'normal';
+        } else if (el) {
+          el.textContent = rest[i].views_fmt + ' views · ' + rest[i].spike_multiple + '× baseline · Rank #' + rest[i].rank;
+          el.style.fontStyle = 'normal';
+        }
+      }
+    });
+  }
+}
+
+load();
+
+// Start live edit-burst polling (every 30s)
+refreshStopPress();
+setInterval(refreshStopPress, 30000);
+</script>
+
+</body>
+</html>

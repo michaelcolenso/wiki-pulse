@@ -1,0 +1,714 @@
+{
+  "history": [
+    {
+      "date": "2026-06-11",
+      "article": "OG Anunoby",
+      "article_url": "https://en.wikipedia.org/wiki/OG_Anunoby",
+      "views": 488031,
+      "views_fmt": "488,031",
+      "spike_multiple": 8.0,
+      "rank": 5,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Taylor Swift",
+      "article_url": "https://en.wikipedia.org/wiki/Taylor_Swift",
+      "views": 115566,
+      "views_fmt": "115,566",
+      "spike_multiple": 6.8,
+      "rank": 24,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Mexico national football team",
+      "article_url": "https://en.wikipedia.org/wiki/Mexico_national_football_team",
+      "views": 148197,
+      "views_fmt": "148,197",
+      "spike_multiple": 6.5,
+      "rank": 19,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Mariska Hargitay",
+      "article_url": "https://en.wikipedia.org/wiki/Mariska_Hargitay",
+      "views": 85642,
+      "views_fmt": "85,642",
+      "spike_multiple": 5.7,
+      "rank": 38,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+      "views": 256901,
+      "views_fmt": "256,901",
+      "spike_multiple": 5.5,
+      "rank": 7,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "2030 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2030_FIFA_World_Cup",
+      "views": 122317,
+      "views_fmt": "122,317",
+      "spike_multiple": 5.2,
+      "rank": 23,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Shakira",
+      "article_url": "https://en.wikipedia.org/wiki/Shakira",
+      "views": 98887,
+      "views_fmt": "98,887",
+      "spike_multiple": 5.0,
+      "rank": 32,
+      "baseline": 19630
+    },
+    {
+      "date": "2026-06-11",
+      "article": "List of FIFA World Cup finals",
+      "article_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+      "views": 138198,
+      "views_fmt": "138,198",
+      "spike_multiple": 5.0,
+      "rank": 21,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "2026 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "views": 753751,
+      "views_fmt": "753,751",
+      "spike_multiple": 4.5,
+      "rank": 3,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "2022 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
+      "views": 103933,
+      "views_fmt": "103,933",
+      "spike_multiple": 4.3,
+      "rank": 29,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "2010 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2010_FIFA_World_Cup",
+      "views": 78324,
+      "views_fmt": "78,324",
+      "spike_multiple": 4.2,
+      "rank": 45,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Mexico",
+      "article_url": "https://en.wikipedia.org/wiki/Mexico",
+      "views": 44492,
+      "views_fmt": "44,492",
+      "spike_multiple": 4.1,
+      "rank": 95,
+      "baseline": 10766
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Timoth\u00e9e Chalamet",
+      "article_url": "https://en.wikipedia.org/wiki/Timoth\u00e9e_Chalamet",
+      "views": 82321,
+      "views_fmt": "82,321",
+      "spike_multiple": 3.8,
+      "rank": 40,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Olivia Rodrigo",
+      "article_url": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+      "views": 55711,
+      "views_fmt": "55,711",
+      "spike_multiple": 3.8,
+      "rank": 75,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "New York Knicks",
+      "article_url": "https://en.wikipedia.org/wiki/New_York_Knicks",
+      "views": 146542,
+      "views_fmt": "146,542",
+      "spike_multiple": 3.7,
+      "rank": 20,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Disclosure Day",
+      "article_url": "https://en.wikipedia.org/wiki/Disclosure_Day",
+      "views": 190372,
+      "views_fmt": "190,372",
+      "spike_multiple": 3.7,
+      "rank": 15,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "FIFA Men's World Ranking",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_Men's_World_Ranking",
+      "views": 103372,
+      "views_fmt": "103,372",
+      "spike_multiple": 3.4,
+      "rank": 30,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "2018 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup",
+      "views": 60905,
+      "views_fmt": "60,905",
+      "spike_multiple": 3.4,
+      "rank": 66,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "2014 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup",
+      "views": 57782,
+      "views_fmt": "57,782",
+      "spike_multiple": 3.1,
+      "rank": 71,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-11",
+      "article": "Jalen Brunson",
+      "article_url": "https://en.wikipedia.org/wiki/Jalen_Brunson",
+      "views": 218024,
+      "views_fmt": "218,024",
+      "spike_multiple": 3.0,
+      "rank": 8,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-10",
+      "article": "Killing of Austin Metcalf",
+      "article_url": "https://en.wikipedia.org/wiki/Killing_of_Austin_Metcalf",
+      "views": 420301,
+      "views_fmt": "420,301",
+      "spike_multiple": 5.1,
+      "rank": 4,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-10",
+      "article": "Graham Platner",
+      "article_url": "https://en.wikipedia.org/wiki/Graham_Platner",
+      "views": 125194,
+      "views_fmt": "125,194",
+      "spike_multiple": 4.0,
+      "rank": 15,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-10",
+      "article": "Disclosure Day",
+      "article_url": "https://en.wikipedia.org/wiki/Disclosure_Day",
+      "views": 175810,
+      "views_fmt": "175,810",
+      "spike_multiple": 3.9,
+      "rank": 8,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-10",
+      "article": "List of FIFA World Cup finals",
+      "article_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+      "views": 74317,
+      "views_fmt": "74,317",
+      "spike_multiple": 3.3,
+      "rank": 30,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-10",
+      "article": "FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+      "views": 120331,
+      "views_fmt": "120,331",
+      "spike_multiple": 3.1,
+      "rank": 16,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-10",
+      "article": "Colman Domingo",
+      "article_url": "https://en.wikipedia.org/wiki/Colman_Domingo",
+      "views": 63125,
+      "views_fmt": "63,125",
+      "spike_multiple": 3.0,
+      "rank": 36,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-10",
+      "article": "2030 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2030_FIFA_World_Cup",
+      "views": 57534,
+      "views_fmt": "57,534",
+      "spike_multiple": 3.0,
+      "rank": 44,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-09",
+      "article": "Ariana Grande",
+      "article_url": "https://en.wikipedia.org/wiki/Ariana_Grande",
+      "views": 59051,
+      "views_fmt": "59,051",
+      "spike_multiple": 4.2,
+      "rank": 40,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-09",
+      "article": "Timoth\u00e9e Chalamet",
+      "article_url": "https://en.wikipedia.org/wiki/Timoth\u00e9e_Chalamet",
+      "views": 77787,
+      "views_fmt": "77,787",
+      "spike_multiple": 4.1,
+      "rank": 28,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-09",
+      "article": "Victor Wembanyama",
+      "article_url": "https://en.wikipedia.org/wiki/Victor_Wembanyama",
+      "views": 343601,
+      "views_fmt": "343,601",
+      "spike_multiple": 3.9,
+      "rank": 4,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-09",
+      "article": "Stephon Castle",
+      "article_url": "https://en.wikipedia.org/wiki/Stephon_Castle",
+      "views": 104966,
+      "views_fmt": "104,966",
+      "spike_multiple": 3.5,
+      "rank": 17,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-09",
+      "article": "Disclosure Day",
+      "article_url": "https://en.wikipedia.org/wiki/Disclosure_Day",
+      "views": 139478,
+      "views_fmt": "139,478",
+      "spike_multiple": 3.5,
+      "rank": 10,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-09",
+      "article": "Mariska Hargitay",
+      "article_url": "https://en.wikipedia.org/wiki/Mariska_Hargitay",
+      "views": 38900,
+      "views_fmt": "38,900",
+      "spike_multiple": 3.4,
+      "rank": 92,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-09",
+      "article": "Michael Olise",
+      "article_url": "https://en.wikipedia.org/wiki/Michael_Olise",
+      "views": 52475,
+      "views_fmt": "52,475",
+      "spike_multiple": 3.1,
+      "rank": 48,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-08",
+      "article": "Michael Olise",
+      "article_url": "https://en.wikipedia.org/wiki/Michael_Olise",
+      "views": 50278,
+      "views_fmt": "50,278",
+      "spike_multiple": 3.4,
+      "rank": 59,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-08",
+      "article": "Lewis Hamilton",
+      "article_url": "https://en.wikipedia.org/wiki/Lewis_Hamilton",
+      "views": 78769,
+      "views_fmt": "78,769",
+      "spike_multiple": 3.3,
+      "rank": 32,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-08",
+      "article": "Masters of the Universe (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Masters_of_the_Universe_(2026_film)",
+      "views": 155937,
+      "views_fmt": "155,937",
+      "spike_multiple": 3.2,
+      "rank": 9,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-07",
+      "article": "Alexander Zverev",
+      "article_url": "https://en.wikipedia.org/wiki/Alexander_Zverev",
+      "views": 476702,
+      "views_fmt": "476,702",
+      "spike_multiple": 6.6,
+      "rank": 3,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-07",
+      "article": "Lewis Hamilton",
+      "article_url": "https://en.wikipedia.org/wiki/Lewis_Hamilton",
+      "views": 88231,
+      "views_fmt": "88,231",
+      "spike_multiple": 4.4,
+      "rank": 30,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-07",
+      "article": "Masters of the Universe (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Masters_of_the_Universe_(2026_film)",
+      "views": 190411,
+      "views_fmt": "190,411",
+      "spike_multiple": 4.3,
+      "rank": 9,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-07",
+      "article": "2026 Formula One World Championship",
+      "article_url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+      "views": 102977,
+      "views_fmt": "102,977",
+      "spike_multiple": 4.3,
+      "rank": 24,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-07",
+      "article": "Scary Movie (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Scary_Movie_(2026_film)",
+      "views": 141030,
+      "views_fmt": "141,030",
+      "spike_multiple": 3.5,
+      "rank": 13,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-06",
+      "article": "Karl-Anthony Towns",
+      "article_url": "https://en.wikipedia.org/wiki/Karl-Anthony_Towns",
+      "views": 153180,
+      "views_fmt": "153,180",
+      "spike_multiple": 5.5,
+      "rank": 15,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-06",
+      "article": "Normandy landings",
+      "article_url": "https://en.wikipedia.org/wiki/Normandy_landings",
+      "views": 96834,
+      "views_fmt": "96,834",
+      "spike_multiple": 5.4,
+      "rank": 28,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-06",
+      "article": "Masters of the Universe (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Masters_of_the_Universe_(2026_film)",
+      "views": 179365,
+      "views_fmt": "179,365",
+      "spike_multiple": 4.5,
+      "rank": 12,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-06",
+      "article": "Scary Movie (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Scary_Movie_(2026_film)",
+      "views": 152140,
+      "views_fmt": "152,140",
+      "spike_multiple": 4.3,
+      "rank": 16,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-06",
+      "article": "Jalen Brunson",
+      "article_url": "https://en.wikipedia.org/wiki/Jalen_Brunson",
+      "views": 204015,
+      "views_fmt": "204,015",
+      "spike_multiple": 4.0,
+      "rank": 8,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-06",
+      "article": "XXX",
+      "article_url": "https://en.wikipedia.org/wiki/XXX",
+      "views": 75533,
+      "views_fmt": "75,533",
+      "spike_multiple": 3.5,
+      "rank": 41,
+      "baseline": 25964
+    },
+    {
+      "date": "2026-06-06",
+      "article": "New York Knicks",
+      "article_url": "https://en.wikipedia.org/wiki/New_York_Knicks",
+      "views": 102283,
+      "views_fmt": "102,283",
+      "spike_multiple": 3.5,
+      "rank": 25,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-06",
+      "article": "Jennifer Lopez",
+      "article_url": "https://en.wikipedia.org/wiki/Jennifer_Lopez",
+      "views": 58299,
+      "views_fmt": "58,299",
+      "spike_multiple": 3.1,
+      "rank": 55,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-05",
+      "article": "Scary Movie (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Scary_Movie_(2026_film)",
+      "views": 176001,
+      "views_fmt": "176,001",
+      "spike_multiple": 6.1,
+      "rank": 12,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-05",
+      "article": "Masters of the Universe (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Masters_of_the_Universe_(2026_film)",
+      "views": 187458,
+      "views_fmt": "187,458",
+      "spike_multiple": 5.4,
+      "rank": 10,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-05",
+      "article": "XXX",
+      "article_url": "https://en.wikipedia.org/wiki/XXX",
+      "views": 86358,
+      "views_fmt": "86,358",
+      "spike_multiple": 4.4,
+      "rank": 25,
+      "baseline": 25964
+    },
+    {
+      "date": "2026-06-05",
+      "article": "Graham Platner",
+      "article_url": "https://en.wikipedia.org/wiki/Graham_Platner",
+      "views": 75887,
+      "views_fmt": "75,887",
+      "spike_multiple": 3.2,
+      "rank": 29,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-05",
+      "article": "Ted Lasso",
+      "article_url": "https://en.wikipedia.org/wiki/Ted_Lasso",
+      "views": 32036,
+      "views_fmt": "32,036",
+      "spike_multiple": 3.1,
+      "rank": 108,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-04",
+      "article": "Jalen Brunson",
+      "article_url": "https://en.wikipedia.org/wiki/Jalen_Brunson",
+      "views": 225818,
+      "views_fmt": "225,818",
+      "spike_multiple": 5.6,
+      "rank": 9,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-04",
+      "article": "Scary Movie (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Scary_Movie_(2026_film)",
+      "views": 104508,
+      "views_fmt": "104,508",
+      "spike_multiple": 5.1,
+      "rank": 21,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-04",
+      "article": "Peddi",
+      "article_url": "https://en.wikipedia.org/wiki/Peddi",
+      "views": 145951,
+      "views_fmt": "145,951",
+      "spike_multiple": 5.0,
+      "rank": 13,
+      "baseline": 71194
+    },
+    {
+      "date": "2026-06-04",
+      "article": "Masters of the Universe (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Masters_of_the_Universe_(2026_film)",
+      "views": 145068,
+      "views_fmt": "145,068",
+      "spike_multiple": 5.0,
+      "rank": 14,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-04",
+      "article": "Karl-Anthony Towns",
+      "article_url": "https://en.wikipedia.org/wiki/Karl-Anthony_Towns",
+      "views": 77613,
+      "views_fmt": "77,613",
+      "spike_multiple": 4.1,
+      "rank": 29,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-04",
+      "article": "Trial of Michael Jackson",
+      "article_url": "https://en.wikipedia.org/wiki/Trial_of_Michael_Jackson",
+      "views": 42889,
+      "views_fmt": "42,889",
+      "spike_multiple": 3.2,
+      "rank": 71,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-04",
+      "article": "Victor Wembanyama",
+      "article_url": "https://en.wikipedia.org/wiki/Victor_Wembanyama",
+      "views": 222064,
+      "views_fmt": "222,064",
+      "spike_multiple": 3.1,
+      "rank": 10,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-04",
+      "article": "New York Knicks",
+      "article_url": "https://en.wikipedia.org/wiki/New_York_Knicks",
+      "views": 78515,
+      "views_fmt": "78,515",
+      "spike_multiple": 3.1,
+      "rank": 27,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "Steve Hilton",
+      "article_url": "https://en.wikipedia.org/wiki/Steve_Hilton",
+      "views": 205442,
+      "views_fmt": "205,442",
+      "spike_multiple": 6.9,
+      "rank": 8,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "2026 California gubernatorial election",
+      "article_url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election",
+      "views": 104267,
+      "views_fmt": "104,267",
+      "spike_multiple": 6.2,
+      "rank": 15,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "Xavier Becerra",
+      "article_url": "https://en.wikipedia.org/wiki/Xavier_Becerra",
+      "views": 91342,
+      "views_fmt": "91,342",
+      "spike_multiple": 5.0,
+      "rank": 19,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "2026 Los Angeles mayoral election",
+      "article_url": "https://en.wikipedia.org/wiki/2026_Los_Angeles_mayoral_election",
+      "views": 61204,
+      "views_fmt": "61,204",
+      "spike_multiple": 3.7,
+      "rank": 41,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "Masters of the Universe (2026 film)",
+      "article_url": "https://en.wikipedia.org/wiki/Masters_of_the_Universe_(2026_film)",
+      "views": 87951,
+      "views_fmt": "87,951",
+      "spike_multiple": 3.6,
+      "rank": 21,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "Tom Steyer",
+      "article_url": "https://en.wikipedia.org/wiki/Tom_Steyer",
+      "views": 49988,
+      "views_fmt": "49,988",
+      "spike_multiple": 3.2,
+      "rank": 52,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "Spencer Pratt",
+      "article_url": "https://en.wikipedia.org/wiki/Spencer_Pratt",
+      "views": 192576,
+      "views_fmt": "192,576",
+      "spike_multiple": 3.2,
+      "rank": 10,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-03",
+      "article": "XXX",
+      "article_url": "https://en.wikipedia.org/wiki/XXX",
+      "views": 46606,
+      "views_fmt": "46,606",
+      "spike_multiple": 3.0,
+      "rank": 62,
+      "baseline": 25964
+    }
+  ]
+}
