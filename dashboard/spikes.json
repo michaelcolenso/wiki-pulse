@@ -13,7 +13,8 @@
       "baseline_30d": 60883,
       "baseline_90d": 55550,
       "max_90d": 488031,
-      "sample_days": 14
+      "sample_days": 14,
+      "context_note": "Featured in a major sporting event, triggering a significant spike in pageviews."
     },
     {
       "article": "Taylor Swift",
@@ -26,7 +27,8 @@
       "baseline_30d": 17057,
       "baseline_90d": 15942,
       "max_90d": 115566,
-      "sample_days": 30
+      "sample_days": 30,
+      "context_note": "In the spotlight \u2014 a notable increase in Wikipedia searches suggests a recent event or release."
     },
     {
       "article": "Mexico national football team",
@@ -39,7 +41,8 @@
       "baseline_30d": 22902,
       "baseline_90d": 22902,
       "max_90d": 148197,
-      "sample_days": 12
+      "sample_days": 12,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "Mariska Hargitay",
@@ -52,7 +55,8 @@
       "baseline_30d": 15055,
       "baseline_90d": 14629,
       "max_90d": 85642,
-      "sample_days": 22
+      "sample_days": 22,
+      "context_note": "Making headlines \u2014 a notable surge in pageviews points to trending news or appearance."
     },
     {
       "article": "FIFA World Cup",
@@ -65,7 +69,8 @@
       "baseline_30d": 46875,
       "baseline_90d": 39942,
       "max_90d": 256901,
-      "sample_days": 30
+      "sample_days": 30,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "2030 FIFA World Cup",
@@ -78,7 +83,8 @@
       "baseline_30d": 23413,
       "baseline_90d": 23413,
       "max_90d": 122317,
-      "sample_days": 24
+      "sample_days": 24,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "List of FIFA World Cup finals",
@@ -91,7 +97,8 @@
       "baseline_30d": 27393,
       "baseline_90d": 27393,
       "max_90d": 138198,
-      "sample_days": 24
+      "sample_days": 24,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "Shakira",
@@ -104,7 +111,8 @@
       "baseline_30d": 19629,
       "baseline_90d": 18329,
       "max_90d": 98887,
-      "sample_days": 30
+      "sample_days": 30,
+      "context_note": "In the spotlight \u2014 a notable increase in Wikipedia searches suggests a recent event or release."
     },
     {
       "article": "2026 FIFA World Cup",
@@ -117,7 +125,8 @@
       "baseline_30d": 168069,
       "baseline_90d": 144321,
       "max_90d": 753751,
-      "sample_days": 30
+      "sample_days": 30,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "2022 FIFA World Cup",
@@ -130,7 +139,8 @@
       "baseline_30d": 24288,
       "baseline_90d": 23749,
       "max_90d": 103933,
-      "sample_days": 29
+      "sample_days": 29,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "2010 FIFA World Cup",
@@ -143,7 +153,8 @@
       "baseline_30d": 18700,
       "baseline_90d": 18700,
       "max_90d": 78324,
-      "sample_days": 18
+      "sample_days": 18,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "Mexico",
@@ -156,7 +167,8 @@
       "baseline_30d": 10766,
       "baseline_90d": 10517,
       "max_90d": 44492,
-      "sample_days": 21
+      "sample_days": 21,
+      "context_note": "In the news \u2014 a notable increase in searches for this location."
     },
     {
       "article": "Timoth\u00e9e Chalamet",
@@ -169,7 +181,8 @@
       "baseline_30d": 21702,
       "baseline_90d": 21314,
       "max_90d": 82321,
-      "sample_days": 30
+      "sample_days": 30,
+      "context_note": "Recent release or premiere is driving a notable surge in searches."
     },
     {
       "article": "Olivia Rodrigo",
@@ -182,7 +195,8 @@
       "baseline_30d": 14768,
       "baseline_90d": 18054,
       "max_90d": 56284,
-      "sample_days": 30
+      "sample_days": 30,
+      "context_note": "Recent release or premiere is driving a notable surge in searches."
     },
     {
       "article": "Disclosure Day",
@@ -195,7 +209,8 @@
       "baseline_30d": 50920,
       "baseline_90d": 42520,
       "max_90d": 190372,
-      "sample_days": 30
+      "sample_days": 30,
+      "context_note": "Recent release or premiere is driving a notable surge in searches."
     },
     {
       "article": "New York Knicks",
@@ -208,7 +223,8 @@
       "baseline_30d": 39791,
       "baseline_90d": 34952,
       "max_90d": 146542,
-      "sample_days": 25
+      "sample_days": 25,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "FIFA Men's World Ranking",
@@ -221,7 +237,8 @@
       "baseline_30d": 30688,
       "baseline_90d": 30688,
       "max_90d": 103372,
-      "sample_days": 17
+      "sample_days": 17,
+      "context_note": "World ranking list. Currently experiencing a notable surge in Wikipedia pageviews."
     },
     {
       "article": "2018 FIFA World Cup",
@@ -234,7 +251,8 @@
       "baseline_30d": 17952,
       "baseline_90d": 17952,
       "max_90d": 60905,
-      "sample_days": 21
+      "sample_days": 21,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "2014 FIFA World Cup",
@@ -247,7 +265,8 @@
       "baseline_30d": 18781,
       "baseline_90d": 18781,
       "max_90d": 57782,
-      "sample_days": 18
+      "sample_days": 18,
+      "context_note": "Major sporting event involving this team/competition is driving a notable surge in searches."
     },
     {
       "article": "Jalen Brunson",
@@ -260,7 +279,8 @@
       "baseline_30d": 72218,
       "baseline_90d": 59415,
       "max_90d": 225818,
-      "sample_days": 23
+      "sample_days": 23,
+      "context_note": "Featured in a major sporting event, triggering a notable spike in pageviews."
     }
   ]
 }

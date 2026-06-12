@@ -35,6 +35,9 @@ def main():
     if not run_step("ANALYZE", ["analyze.py"]):
         success = False
     
+    if not run_step("CONTEXT", ["context.py"]):
+        success = False
+    
     spikes_json = PROJECT_DIR / "dashboard" / "spikes.json"
     if spikes_json.exists():
         data = json.loads(spikes_json.read_text())

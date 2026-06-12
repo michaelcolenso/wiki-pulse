@@ -273,9 +273,21 @@
     font-family: var(--serif);
     font-size: 18px;
     font-style: italic;
-    color: var(--ink-dim);
     line-height: 1.5;
     margin-bottom: 14px;
+  }
+
+  .hero .context-note {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--navy);
+    background: var(--navy-bg);
+    padding: 8px 12px;
+    border-left: 3px solid var(--navy);
+    margin-bottom: 14px;
+    border-radius: 0 2px 2px 0;
   }
 
   .hero .blurb {
@@ -378,6 +390,19 @@
     color: var(--ink-dim);
     line-height: 1.5;
     margin-bottom: 8px;
+  }
+
+  .story .story-context {
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--navy);
+    background: var(--navy-bg);
+    padding: 6px 10px;
+    border-left: 2px solid var(--navy);
+    margin-bottom: 8px;
+    border-radius: 0 2px 2px 0;
   }
 
   .story .story-meta {
@@ -705,36 +730,6 @@ function tierKicker(t) {
   return 'Notable';
 }
 
-// Fetch Wikipedia summary (description + extract) for a single article
-async function fetchWikiSummary(article) {
-  try {
-    const url = 'https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(article);
-    const res = await fetch(url);
-    if (!res.ok) return null;
-    const data = await res.json();
-    return {
-      description: data.description || '',
-      extract: data.extract || ''
-    };
-  } catch (e) {
-    return null;
-  }
-}
-
-// Fetch summaries for all spikes (batched, avoid rate limiting)
-async function fetchAllSummaries(spikes) {
-  const summaries = {};
-  const batch = async (items) => {
-    for (const s of items) {
-      const wiki = await fetchWikiSummary(s.article);
-      if (wiki) summaries[s.article] = wiki;
-    }
-  };
-  await batch(spikes);
-  return summaries;
-}
-
-// ── Stop Press: poll realtime.json for live edit bursts ──
 async function refreshStopPress() {
   try {
     const res = await fetch('realtime.json?v=' + Date.now());
@@ -809,9 +804,6 @@ async function load() {
 
   document.getElementById('report-date').textContent = spikes.date || 'No date';
 
-  // Fetch Wikipedia summaries for all spikes (background, non-blocking after first render)
-  const summariesPromise = fetchAllSummaries(spikes.spikes);
-
   const high = spikes.spikes.filter(s => s.spike_tier === 'high');
   const med  = spikes.spikes.filter(s => s.spike_tier === 'med');
   const low  = spikes.spikes.filter(s => s.spike_tier === 'low');
@@ -842,7 +834,7 @@ async function load() {
         hero.views_fmt + ' readers today, compared to a typical ~' + fmt(hero.baseline_30d) +
         '. Wikipedia editors are scrambling.' +
       '</div>' +
-      '<div class="blurb" id="hero-blurb"><em>Loading context…</em></div>' +
+      '<div class="context-note" id="hero-context">' + (hero.context_note || 'Why is this trending? Check back soon.') + '</div>' +
       '<div class="byline">' +
         '<span class="views-hero">' + hero.views_fmt + ' views</span>' +
         '<span>Rank #' + hero.rank + ' today</span>' +
@@ -862,7 +854,7 @@ async function load() {
         html += '<div class="story">' +
           '<div class="story-kicker ' + t + '">' + tierLabel(t) + '</div>' +
           '<div class="story-head"><a href="' + s.article_url + '" target="_blank" rel="noopener">' + s.article + '</a></div>' +
-          '<div class="story-deck" id="story-blurb-' + i + '"><em>Loading…</em></div>' +
+          '<div class="story-context">' + (s.context_note || 'Spiking on Wikipedia today.') + '</div>' +
           '<div class="story-meta">' +
             '<span class="views">' + s.views_fmt + ' today</span>' +
             '<span>~' + fmt(s.baseline_30d) + ' avg · ' + s.spike_multiple + '× baseline</span>' +
@@ -896,37 +888,6 @@ async function load() {
   }
 
   app.innerHTML = html;
-
-  // Populate Wikipedia blurbs after summaries load
-  if (spikes.spikes.length > 0) {
-    summariesPromise.then(summaries => {
-      // Hero blurb
-      const hero = spikes.spikes[0];
-      const heroSum = summaries[hero.article];
-      const heroBlurb = document.getElementById('hero-blurb');
-      if (heroBlurb && heroSum && heroSum.extract) {
-        heroBlurb.textContent = heroSum.extract;
-      } else if (heroBlurb && heroSum && heroSum.description) {
-        heroBlurb.textContent = heroSum.description;
-      } else if (heroBlurb) {
-        heroBlurb.textContent = '';
-      }
-
-      // Story cards
-      const rest = spikes.spikes.slice(1);
-      for (let i = 0; i < rest.length; i++) {
-        const sum = summaries[rest[i].article];
-        const el = document.getElementById('story-blurb-' + i);
-        if (el && sum) {
-          el.textContent = sum.description || sum.extract?.substring(0, 120) || '';
-          el.style.fontStyle = 'normal';
-        } else if (el) {
-          el.textContent = rest[i].views_fmt + ' views · ' + rest[i].spike_multiple + '× baseline · Rank #' + rest[i].rank;
-          el.style.fontStyle = 'normal';
-        }
-      }
-    });
-  }
 }
 
 load();
