@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-15T07:58:33.143745+00:00",
+  "updated_at": "2026-06-15T08:24:44.979661+00:00",
   "listening_since": "2026-06-05T05:55:16.430767+00:00",
-  "active_bursts": 366,
+  "active_bursts": 353,
   "bursts": [
     {
       "article": "13th Street Repertory Theatre",
@@ -9,7 +9,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140562+00:00"
+      "detected_at": "2026-06-15T08:24:44.977074+00:00"
     },
     {
       "article": "17th Pennsylvania Infantry Regiment",
@@ -17,7 +17,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140586+00:00"
+      "detected_at": "2026-06-15T08:24:44.977095+00:00"
     },
     {
       "article": "1930 FIFA World Cup squads",
@@ -25,7 +25,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140592+00:00"
+      "detected_at": "2026-06-15T08:24:44.977102+00:00"
     },
     {
       "article": "1933\u201334 Philadelphia Sphas season",
@@ -33,7 +33,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140599+00:00"
+      "detected_at": "2026-06-15T08:24:44.977109+00:00"
     },
     {
       "article": "1944",
@@ -41,7 +41,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140609+00:00"
+      "detected_at": "2026-06-15T08:24:44.977120+00:00"
     },
     {
       "article": "1986 in Japanese music",
@@ -49,15 +49,7 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140616+00:00"
-    },
-    {
-      "article": "1993 Philippine Basketball League season",
-      "article_url": "https://en.wikipedia.org/wiki/1993 Philippine Basketball League season",
-      "tier": "med",
-      "edits_15m": 0,
-      "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140622+00:00"
+      "detected_at": "2026-06-15T08:24:44.977127+00:00"
     },
     {
       "article": "2016 Winnipeg Blue Bombers season",
@@ -65,23 +57,23 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140629+00:00"
+      "detected_at": "2026-06-15T08:24:44.977134+00:00"
     },
     {
       "article": "2024 Indian general election in West Bengal",
       "article_url": "https://en.wikipedia.org/wiki/2024 Indian general election in West Bengal",
       "tier": "med",
-      "edits_15m": 3,
+      "edits_15m": 0,
       "edits_1h": 6,
-      "detected_at": "2026-06-15T07:58:33.140636+00:00"
+      "detected_at": "2026-06-15T08:24:44.977141+00:00"
     },
     {
       "article": "2025 Scottish Open (snooker)",
       "article_url": "https://en.wikipedia.org/wiki/2025 Scottish Open (snooker)",
       "tier": "med",
       "edits_15m": 0,
-      "edits_1h": 12,
-      "detected_at": "2026-06-15T07:58:33.140645+00:00"
+      "edits_1h": 4,
+      "detected_at": "2026-06-15T08:24:44.977150+00:00"
     },
     {
       "article": "2025\u201326 NHL season",
@@ -89,7 +81,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140653+00:00"
+      "detected_at": "2026-06-15T08:24:44.977158+00:00"
     },
     {
       "article": "2026 Austin FC II season",
@@ -97,7 +89,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140657+00:00"
+      "detected_at": "2026-06-15T08:24:44.977162+00:00"
     },
     {
       "article": "2026 Badminton Asia Junior Championships \u2013 Boys' singles",
@@ -105,7 +97,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140665+00:00"
+      "detected_at": "2026-06-15T08:24:44.977169+00:00"
     },
     {
       "article": "2026 Butler PAC 750 crash",
@@ -113,7 +105,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140671+00:00"
+      "detected_at": "2026-06-15T08:24:44.977174+00:00"
     },
     {
       "article": "2026 Butler PAC P-750 crash",
@@ -121,7 +113,7 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140678+00:00"
+      "detected_at": "2026-06-15T08:24:44.977180+00:00"
     },
     {
       "article": "2026 CEBL season",
@@ -129,7 +121,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140683+00:00"
+      "detected_at": "2026-06-15T08:24:44.977186+00:00"
     },
     {
       "article": "2026 EUT20 Belgium",
@@ -137,7 +129,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140691+00:00"
+      "detected_at": "2026-06-15T08:24:44.977193+00:00"
     },
     {
       "article": "2026 FIA World Endurance Championship",
@@ -145,7 +137,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140696+00:00"
+      "detected_at": "2026-06-15T08:24:44.977197+00:00"
     },
     {
       "article": "2026 FIBA U18 Women's AmeriCup",
@@ -153,15 +145,15 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140701+00:00"
+      "detected_at": "2026-06-15T08:24:44.977202+00:00"
     },
     {
       "article": "2026 FIFA World Cup",
       "article_url": "https://en.wikipedia.org/wiki/2026 FIFA World Cup",
       "tier": "high",
-      "edits_15m": 0,
-      "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140708+00:00"
+      "edits_15m": 1,
+      "edits_1h": 1,
+      "detected_at": "2026-06-15T08:24:44.977209+00:00"
     },
     {
       "article": "2026 FIFA World Cup Group E",
@@ -169,7 +161,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140712+00:00"
+      "detected_at": "2026-06-15T08:24:44.977213+00:00"
     },
     {
       "article": "2026 FIVB Men's Volleyball Nations League",
@@ -177,31 +169,31 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140717+00:00"
+      "detected_at": "2026-06-15T08:24:44.977217+00:00"
     },
     {
       "article": "2026 Georgia gubernatorial election",
       "article_url": "https://en.wikipedia.org/wiki/2026 Georgia gubernatorial election",
       "tier": "med",
-      "edits_15m": 0,
-      "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140721+00:00"
+      "edits_15m": 1,
+      "edits_1h": 1,
+      "detected_at": "2026-06-15T08:24:44.977221+00:00"
     },
     {
       "article": "2026 German Football League",
       "article_url": "https://en.wikipedia.org/wiki/2026 German Football League",
       "tier": "med",
       "edits_15m": 0,
-      "edits_1h": 3,
-      "detected_at": "2026-06-15T07:58:33.140727+00:00"
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T08:24:44.977228+00:00"
     },
     {
       "article": "2026 Internazionali Femminili di Brescia \u2013 Singles",
       "article_url": "https://en.wikipedia.org/wiki/2026 Internazionali Femminili di Brescia \u2013 Singles",
       "tier": "med",
       "edits_15m": 0,
-      "edits_1h": 4,
-      "detected_at": "2026-06-15T07:58:33.140734+00:00"
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T08:24:44.977234+00:00"
     },
     {
       "article": "2026 Iran war",
@@ -209,15 +201,15 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140740+00:00"
+      "detected_at": "2026-06-15T08:24:44.977240+00:00"
     },
     {
-      "article": "2026 NASCAR Cup Series",
-      "article_url": "https://en.wikipedia.org/wiki/2026 NASCAR Cup Series",
-      "tier": "high",
-      "edits_15m": 0,
-      "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140744+00:00"
+      "article": "2026 Macau Open (badminton)",
+      "article_url": "https://en.wikipedia.org/wiki/2026 Macau Open (badminton)",
+      "tier": "med",
+      "edits_15m": 10,
+      "edits_1h": 13,
+      "detected_at": "2026-06-15T08:24:44.977249+00:00"
     },
     {
       "article": "2026 NBA Finals",
@@ -225,7 +217,7 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 2,
-      "detected_at": "2026-06-15T07:58:33.140755+00:00"
+      "detected_at": "2026-06-15T08:24:44.977259+00:00"
     },
     {
       "article": "2026 NBA playoffs",
@@ -233,7 +225,7 @@
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140762+00:00"
+      "detected_at": "2026-06-15T08:24:44.977286+00:00"
     },
     {
       "article": "2026 NCAA Division I baseball tournament",
@@ -241,7 +233,15 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-15T07:58:33.140768+00:00"
+      "detected_at": "2026-06-15T08:24:44.977291+00:00"
+    },
+    {
+      "article": "2026 NHL entry draft",
+      "article_url": "https://en.wikipedia.org/wiki/2026 NHL entry draft",
+      "tier": "med",
+      "edits_15m": 4,
+      "edits_1h": 4,
+      "detected_at": "2026-06-15T08:24:44.977299+00:00"
     }
   ]
 }
