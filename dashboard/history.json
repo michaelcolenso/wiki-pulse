@@ -1,6 +1,646 @@
 {
   "history": [
     {
+      "date": "2026-06-14",
+      "article": "Cura\u00e7ao",
+      "article_url": "https://en.wikipedia.org/wiki/Cura\u00e7ao",
+      "views": 1215504,
+      "views_fmt": "1,215,504",
+      "spike_multiple": 13.4,
+      "rank": 4,
+      "baseline": 90442
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Jalen Brunson",
+      "article_url": "https://en.wikipedia.org/wiki/Jalen_Brunson",
+      "views": 1326341,
+      "views_fmt": "1,326,341",
+      "spike_multiple": 11.0,
+      "rank": 3,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Rick Brunson",
+      "article_url": "https://en.wikipedia.org/wiki/Rick_Brunson",
+      "views": 586799,
+      "views_fmt": "586,799",
+      "spike_multiple": 10.9,
+      "rank": 8,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Cura\u00e7ao national football team",
+      "article_url": "https://en.wikipedia.org/wiki/Cura\u00e7ao_national_football_team",
+      "views": 338378,
+      "views_fmt": "338,378",
+      "spike_multiple": 8.3,
+      "rank": 12,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Mike Brown (basketball, born 1970)",
+      "article_url": "https://en.wikipedia.org/wiki/Mike_Brown_(basketball,_born_1970)",
+      "views": 311417,
+      "views_fmt": "311,417",
+      "spike_multiple": 8.2,
+      "rank": 14,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "UFC Freedom 250",
+      "article_url": "https://en.wikipedia.org/wiki/UFC_Freedom_250",
+      "views": 281553,
+      "views_fmt": "281,553",
+      "spike_multiple": 7.5,
+      "rank": 16,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "New York Knicks",
+      "article_url": "https://en.wikipedia.org/wiki/New_York_Knicks",
+      "views": 385118,
+      "views_fmt": "385,118",
+      "spike_multiple": 7.3,
+      "rank": 10,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Germany national football team",
+      "article_url": "https://en.wikipedia.org/wiki/Germany_national_football_team",
+      "views": 112144,
+      "views_fmt": "112,144",
+      "spike_multiple": 5.7,
+      "rank": 49,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "List of NBA champions",
+      "article_url": "https://en.wikipedia.org/wiki/List_of_NBA_champions",
+      "views": 163465,
+      "views_fmt": "163,465",
+      "spike_multiple": 5.4,
+      "rank": 32,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Karl-Anthony Towns",
+      "article_url": "https://en.wikipedia.org/wiki/Karl-Anthony_Towns",
+      "views": 242793,
+      "views_fmt": "242,793",
+      "spike_multiple": 5.3,
+      "rank": 20,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "2026 NBA Finals",
+      "article_url": "https://en.wikipedia.org/wiki/2026_NBA_Finals",
+      "views": 145544,
+      "views_fmt": "145,544",
+      "spike_multiple": 5.2,
+      "rank": 36,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Netherlands national football team",
+      "article_url": "https://en.wikipedia.org/wiki/Netherlands_national_football_team",
+      "views": 86385,
+      "views_fmt": "86,385",
+      "spike_multiple": 5.1,
+      "rank": 65,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Josh Hart",
+      "article_url": "https://en.wikipedia.org/wiki/Josh_Hart",
+      "views": 166361,
+      "views_fmt": "166,361",
+      "spike_multiple": 5.0,
+      "rank": 30,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Lewis Hamilton",
+      "article_url": "https://en.wikipedia.org/wiki/Lewis_Hamilton",
+      "views": 125219,
+      "views_fmt": "125,219",
+      "spike_multiple": 4.4,
+      "rank": 41,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Netherlands",
+      "article_url": "https://en.wikipedia.org/wiki/Netherlands",
+      "views": 46873,
+      "views_fmt": "46,873",
+      "spike_multiple": 4.3,
+      "rank": 158,
+      "baseline": 10922
+    },
+    {
+      "date": "2026-06-14",
+      "article": "FIFA Men's World Ranking",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_Men's_World_Ranking",
+      "views": 205321,
+      "views_fmt": "205,321",
+      "spike_multiple": 4.2,
+      "rank": 26,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "List of FIFA World Cup finals",
+      "article_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+      "views": 163912,
+      "views_fmt": "163,912",
+      "spike_multiple": 4.1,
+      "rank": 31,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Cape Verde",
+      "article_url": "https://en.wikipedia.org/wiki/Cape_Verde",
+      "views": 72845,
+      "views_fmt": "72,845",
+      "spike_multiple": 4.1,
+      "rank": 85,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Timoth\u00e9e Chalamet",
+      "article_url": "https://en.wikipedia.org/wiki/Timoth\u00e9e_Chalamet",
+      "views": 106350,
+      "views_fmt": "106,350",
+      "spike_multiple": 4.0,
+      "rank": 53,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+      "views": 277126,
+      "views_fmt": "277,126",
+      "spike_multiple": 3.9,
+      "rank": 17,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Sydney Sweeney",
+      "article_url": "https://en.wikipedia.org/wiki/Sydney_Sweeney",
+      "views": 77224,
+      "views_fmt": "77,224",
+      "spike_multiple": 3.7,
+      "rank": 80,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Bhooth Bangla",
+      "article_url": "https://en.wikipedia.org/wiki/Bhooth_Bangla",
+      "views": 79661,
+      "views_fmt": "79,661",
+      "spike_multiple": 3.7,
+      "rank": 76,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "2030 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2030_FIFA_World_Cup",
+      "views": 115268,
+      "views_fmt": "115,268",
+      "spike_multiple": 3.4,
+      "rank": 46,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Donald Trump",
+      "article_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+      "views": 151397,
+      "views_fmt": "151,397",
+      "spike_multiple": 3.3,
+      "rank": 34,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Disclosure Day",
+      "article_url": "https://en.wikipedia.org/wiki/Disclosure_Day",
+      "views": 256544,
+      "views_fmt": "256,544",
+      "spike_multiple": 3.3,
+      "rank": 18,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "2026 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "views": 777070,
+      "views_fmt": "777,070",
+      "spike_multiple": 3.3,
+      "rank": 6,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "2022 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
+      "views": 114440,
+      "views_fmt": "114,440",
+      "spike_multiple": 3.3,
+      "rank": 48,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "OG Anunoby",
+      "article_url": "https://en.wikipedia.org/wiki/OG_Anunoby",
+      "views": 240970,
+      "views_fmt": "240,970",
+      "spike_multiple": 3.2,
+      "rank": 21,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Elon Musk",
+      "article_url": "https://en.wikipedia.org/wiki/Elon_Musk",
+      "views": 115219,
+      "views_fmt": "115,219",
+      "spike_multiple": 3.1,
+      "rank": 47,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "2026 Formula One World Championship",
+      "article_url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+      "views": 81555,
+      "views_fmt": "81,555",
+      "spike_multiple": 3.1,
+      "rank": 72,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-14",
+      "article": "Turkey",
+      "article_url": "https://en.wikipedia.org/wiki/Turkey",
+      "views": 31313,
+      "views_fmt": "31,313",
+      "spike_multiple": 3.0,
+      "rank": 252,
+      "baseline": 10519
+    },
+    {
+      "date": "2026-06-13",
+      "article": "United States men's national soccer team",
+      "article_url": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team",
+      "views": 202073,
+      "views_fmt": "202,073",
+      "spike_multiple": 8.1,
+      "rank": 14,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Christian Pulisic",
+      "article_url": "https://en.wikipedia.org/wiki/Christian_Pulisic",
+      "views": 304331,
+      "views_fmt": "304,331",
+      "spike_multiple": 7.4,
+      "rank": 7,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Carlo Ancelotti",
+      "article_url": "https://en.wikipedia.org/wiki/Carlo_Ancelotti",
+      "views": 96529,
+      "views_fmt": "96,529",
+      "spike_multiple": 6.0,
+      "rank": 34,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Elon Musk",
+      "article_url": "https://en.wikipedia.org/wiki/Elon_Musk",
+      "views": 186157,
+      "views_fmt": "186,157",
+      "spike_multiple": 5.4,
+      "rank": 16,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Mauricio Pochettino",
+      "article_url": "https://en.wikipedia.org/wiki/Mauricio_Pochettino",
+      "views": 242612,
+      "views_fmt": "242,612",
+      "spike_multiple": 5.3,
+      "rank": 12,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Brazil national football team",
+      "article_url": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+      "views": 102852,
+      "views_fmt": "102,852",
+      "spike_multiple": 5.0,
+      "rank": 30,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Bhooth Bangla",
+      "article_url": "https://en.wikipedia.org/wiki/Bhooth_Bangla",
+      "views": 93096,
+      "views_fmt": "93,096",
+      "spike_multiple": 5.0,
+      "rank": 41,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Neymar",
+      "article_url": "https://en.wikipedia.org/wiki/Neymar",
+      "views": 95208,
+      "views_fmt": "95,208",
+      "spike_multiple": 4.5,
+      "rank": 37,
+      "baseline": 22780
+    },
+    {
+      "date": "2026-06-13",
+      "article": "List of FIFA World Cup finals",
+      "article_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+      "views": 148916,
+      "views_fmt": "148,916",
+      "spike_multiple": 4.2,
+      "rank": 18,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Disclosure Day",
+      "article_url": "https://en.wikipedia.org/wiki/Disclosure_Day",
+      "views": 281918,
+      "views_fmt": "281,918",
+      "spike_multiple": 4.1,
+      "rank": 8,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "UFC Freedom 250",
+      "article_url": "https://en.wikipedia.org/wiki/UFC_Freedom_250",
+      "views": 109941,
+      "views_fmt": "109,941",
+      "spike_multiple": 4.0,
+      "rank": 26,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "David Beckham",
+      "article_url": "https://en.wikipedia.org/wiki/David_Beckham",
+      "views": 53933,
+      "views_fmt": "53,933",
+      "spike_multiple": 4.0,
+      "rank": 96,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "2022 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
+      "views": 126899,
+      "views_fmt": "126,899",
+      "spike_multiple": 4.0,
+      "rank": 22,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+      "views": 243063,
+      "views_fmt": "243,063",
+      "spike_multiple": 3.9,
+      "rank": 11,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "2030 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2030_FIFA_World_Cup",
+      "views": 118763,
+      "views_fmt": "118,763",
+      "spike_multiple": 3.9,
+      "rank": 23,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "FIFA Men's World Ranking",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_Men's_World_Ranking",
+      "views": 149095,
+      "views_fmt": "149,095",
+      "spike_multiple": 3.7,
+      "rank": 17,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "2026 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "views": 721207,
+      "views_fmt": "721,207",
+      "spike_multiple": 3.4,
+      "rank": 4,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Thierry Henry",
+      "article_url": "https://en.wikipedia.org/wiki/Thierry_Henry",
+      "views": 55029,
+      "views_fmt": "55,029",
+      "spike_multiple": 3.2,
+      "rank": 89,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-13",
+      "article": "Cura\u00e7ao",
+      "article_url": "https://en.wikipedia.org/wiki/Cura\u00e7ao",
+      "views": 83203,
+      "views_fmt": "83,203",
+      "spike_multiple": 3.0,
+      "rank": 47,
+      "baseline": 90442
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Elon Musk",
+      "article_url": "https://en.wikipedia.org/wiki/Elon_Musk",
+      "views": 194434,
+      "views_fmt": "194,434",
+      "spike_multiple": 6.6,
+      "rank": 10,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Czech Republic",
+      "article_url": "https://en.wikipedia.org/wiki/Czech_Republic",
+      "views": 126634,
+      "views_fmt": "126,634",
+      "spike_multiple": 5.9,
+      "rank": 20,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Olivia Rodrigo",
+      "article_url": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+      "views": 99157,
+      "views_fmt": "99,157",
+      "spike_multiple": 5.7,
+      "rank": 31,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Shakira",
+      "article_url": "https://en.wikipedia.org/wiki/Shakira",
+      "views": 127111,
+      "views_fmt": "127,111",
+      "spike_multiple": 5.4,
+      "rank": 19,
+      "baseline": 26578
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Ryan Reynolds",
+      "article_url": "https://en.wikipedia.org/wiki/Ryan_Reynolds",
+      "views": 64209,
+      "views_fmt": "64,209",
+      "spike_multiple": 5.2,
+      "rank": 62,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Bhooth Bangla",
+      "article_url": "https://en.wikipedia.org/wiki/Bhooth_Bangla",
+      "views": 81772,
+      "views_fmt": "81,772",
+      "spike_multiple": 5.2,
+      "rank": 45,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Disclosure Day",
+      "article_url": "https://en.wikipedia.org/wiki/Disclosure_Day",
+      "views": 273975,
+      "views_fmt": "273,975",
+      "spike_multiple": 4.6,
+      "rank": 7,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+      "views": 234546,
+      "views_fmt": "234,546",
+      "spike_multiple": 4.3,
+      "rank": 8,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "2030 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2030_FIFA_World_Cup",
+      "views": 107503,
+      "views_fmt": "107,503",
+      "spike_multiple": 4.0,
+      "rank": 26,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "2026 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "views": 753751,
+      "views_fmt": "753,751",
+      "spike_multiple": 3.9,
+      "rank": 3,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "List of FIFA World Cup finals",
+      "article_url": "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
+      "views": 119259,
+      "views_fmt": "119,259",
+      "spike_multiple": 3.8,
+      "rank": 23,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "2022 FIFA World Cup",
+      "article_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
+      "views": 102381,
+      "views_fmt": "102,381",
+      "spike_multiple": 3.7,
+      "rank": 29,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "United States men's national soccer team",
+      "article_url": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team",
+      "views": 55039,
+      "views_fmt": "55,039",
+      "spike_multiple": 3.5,
+      "rank": 79,
+      "baseline": null
+    },
+    {
+      "date": "2026-06-12",
+      "article": "Mariska Hargitay",
+      "article_url": "https://en.wikipedia.org/wiki/Mariska_Hargitay",
+      "views": 52232,
+      "views_fmt": "52,232",
+      "spike_multiple": 3.1,
+      "rank": 87,
+      "baseline": null
+    },
+    {
       "date": "2026-06-11",
       "article": "OG Anunoby",
       "article_url": "https://en.wikipedia.org/wiki/OG_Anunoby",
@@ -68,7 +708,7 @@
       "views_fmt": "98,887",
       "spike_multiple": 5.0,
       "rank": 32,
-      "baseline": 19630
+      "baseline": 26578
     },
     {
       "date": "2026-06-11",
@@ -118,7 +758,7 @@
       "views_fmt": "44,492",
       "spike_multiple": 4.1,
       "rank": 95,
-      "baseline": 10766
+      "baseline": 11758
     },
     {
       "date": "2026-06-11",
@@ -478,7 +1118,7 @@
       "views_fmt": "75,533",
       "spike_multiple": 3.5,
       "rank": 41,
-      "baseline": 25964
+      "baseline": 26208
     },
     {
       "date": "2026-06-06",
@@ -528,7 +1168,7 @@
       "views_fmt": "86,358",
       "spike_multiple": 4.4,
       "rank": 25,
-      "baseline": 25964
+      "baseline": 26208
     },
     {
       "date": "2026-06-05",
@@ -578,7 +1218,7 @@
       "views_fmt": "145,951",
       "spike_multiple": 5.0,
       "rank": 13,
-      "baseline": 71194
+      "baseline": 69828
     },
     {
       "date": "2026-06-04",
@@ -708,7 +1348,7 @@
       "views_fmt": "46,606",
       "spike_multiple": 3.0,
       "rank": 62,
-      "baseline": 25964
+      "baseline": 26208
     }
   ]
 }

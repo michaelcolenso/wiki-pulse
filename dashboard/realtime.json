@@ -1,119 +1,159 @@
 {
-  "updated_at": "2026-06-12T08:07:52.306497+00:00",
+  "updated_at": "2026-06-15T07:58:33.143745+00:00",
   "listening_since": "2026-06-05T05:55:16.430767+00:00",
-  "active_bursts": 335,
+  "active_bursts": 366,
   "bursts": [
     {
-      "article": "100 metres",
-      "article_url": "https://en.wikipedia.org/wiki/100 metres",
+      "article": "13th Street Repertory Theatre",
+      "article_url": "https://en.wikipedia.org/wiki/13th Street Repertory Theatre",
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304176+00:00"
+      "detected_at": "2026-06-15T07:58:33.140562+00:00"
     },
     {
-      "article": "10th Regiment Maryland Volunteer Infantry",
-      "article_url": "https://en.wikipedia.org/wiki/10th Regiment Maryland Volunteer Infantry",
+      "article": "17th Pennsylvania Infantry Regiment",
+      "article_url": "https://en.wikipedia.org/wiki/17th Pennsylvania Infantry Regiment",
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304196+00:00"
+      "detected_at": "2026-06-15T07:58:33.140586+00:00"
     },
     {
-      "article": "16 Vayathinile",
-      "article_url": "https://en.wikipedia.org/wiki/16 Vayathinile",
+      "article": "1930 FIFA World Cup squads",
+      "article_url": "https://en.wikipedia.org/wiki/1930 FIFA World Cup squads",
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304205+00:00"
+      "detected_at": "2026-06-15T07:58:33.140592+00:00"
     },
     {
-      "article": "1830 in literature",
-      "article_url": "https://en.wikipedia.org/wiki/1830 in literature",
+      "article": "1933\u201334 Philadelphia Sphas season",
+      "article_url": "https://en.wikipedia.org/wiki/1933\u201334 Philadelphia Sphas season",
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304215+00:00"
+      "detected_at": "2026-06-15T07:58:33.140599+00:00"
     },
     {
-      "article": "1970 United Kingdom general election in England",
-      "article_url": "https://en.wikipedia.org/wiki/1970 United Kingdom general election in England",
+      "article": "1944",
+      "article_url": "https://en.wikipedia.org/wiki/1944",
+      "tier": "med",
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140609+00:00"
+    },
+    {
+      "article": "1986 in Japanese music",
+      "article_url": "https://en.wikipedia.org/wiki/1986 in Japanese music",
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304220+00:00"
+      "detected_at": "2026-06-15T07:58:33.140616+00:00"
     },
     {
-      "article": "1999 World Snooker Championship",
-      "article_url": "https://en.wikipedia.org/wiki/1999 World Snooker Championship",
+      "article": "1993 Philippine Basketball League season",
+      "article_url": "https://en.wikipedia.org/wiki/1993 Philippine Basketball League season",
       "tier": "med",
-      "edits_15m": 6,
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140622+00:00"
+    },
+    {
+      "article": "2016 Winnipeg Blue Bombers season",
+      "article_url": "https://en.wikipedia.org/wiki/2016 Winnipeg Blue Bombers season",
+      "tier": "med",
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140629+00:00"
+    },
+    {
+      "article": "2024 Indian general election in West Bengal",
+      "article_url": "https://en.wikipedia.org/wiki/2024 Indian general election in West Bengal",
+      "tier": "med",
+      "edits_15m": 3,
       "edits_1h": 6,
-      "detected_at": "2026-06-12T08:07:52.304226+00:00"
+      "detected_at": "2026-06-15T07:58:33.140636+00:00"
     },
     {
-      "article": "2025\u201326 FK \u017deleziarne Podbrezov\u00e1 season",
-      "article_url": "https://en.wikipedia.org/wiki/2025\u201326 FK \u017deleziarne Podbrezov\u00e1 season",
+      "article": "2025 Scottish Open (snooker)",
+      "article_url": "https://en.wikipedia.org/wiki/2025 Scottish Open (snooker)",
       "tier": "med",
       "edits_15m": 0,
-      "edits_1h": 2,
-      "detected_at": "2026-06-12T08:07:52.304235+00:00"
+      "edits_1h": 12,
+      "detected_at": "2026-06-15T07:58:33.140645+00:00"
     },
     {
-      "article": "2025\u201326 Glasgow Warriors season",
-      "article_url": "https://en.wikipedia.org/wiki/2025\u201326 Glasgow Warriors season",
-      "tier": "med",
-      "edits_15m": 0,
-      "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304242+00:00"
-    },
-    {
-      "article": "2026 ACC Men's Challenger Cup",
-      "article_url": "https://en.wikipedia.org/wiki/2026 ACC Men's Challenger Cup",
+      "article": "2025\u201326 NHL season",
+      "article_url": "https://en.wikipedia.org/wiki/2025\u201326 NHL season",
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304260+00:00"
+      "detected_at": "2026-06-15T07:58:33.140653+00:00"
     },
     {
-      "article": "2026 AVC Women's Volleyball Cup",
-      "article_url": "https://en.wikipedia.org/wiki/2026 AVC Women's Volleyball Cup",
+      "article": "2026 Austin FC II season",
+      "article_url": "https://en.wikipedia.org/wiki/2026 Austin FC II season",
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304288+00:00"
+      "detected_at": "2026-06-15T07:58:33.140657+00:00"
     },
     {
-      "article": "2026 Auckland Rugby League season",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Auckland Rugby League season",
+      "article": "2026 Badminton Asia Junior Championships \u2013 Boys' singles",
+      "article_url": "https://en.wikipedia.org/wiki/2026 Badminton Asia Junior Championships \u2013 Boys' singles",
       "tier": "med",
       "edits_15m": 0,
-      "edits_1h": 6,
-      "detected_at": "2026-06-12T08:07:52.304295+00:00"
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140665+00:00"
     },
     {
-      "article": "2026 Australian Open (badminton)",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Australian Open (badminton)",
+      "article": "2026 Butler PAC 750 crash",
+      "article_url": "https://en.wikipedia.org/wiki/2026 Butler PAC 750 crash",
+      "tier": "med",
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140671+00:00"
+    },
+    {
+      "article": "2026 Butler PAC P-750 crash",
+      "article_url": "https://en.wikipedia.org/wiki/2026 Butler PAC P-750 crash",
       "tier": "high",
-      "edits_15m": 1,
-      "edits_1h": 8,
-      "detected_at": "2026-06-12T08:07:52.304317+00:00"
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140678+00:00"
     },
     {
-      "article": "2026 China Open (snooker)",
-      "article_url": "https://en.wikipedia.org/wiki/2026 China Open (snooker)",
+      "article": "2026 CEBL season",
+      "article_url": "https://en.wikipedia.org/wiki/2026 CEBL season",
       "tier": "med",
-      "edits_15m": 1,
-      "edits_1h": 1,
-      "detected_at": "2026-06-12T08:07:52.304322+00:00"
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140683+00:00"
     },
     {
       "article": "2026 EUT20 Belgium",
       "article_url": "https://en.wikipedia.org/wiki/2026 EUT20 Belgium",
       "tier": "med",
-      "edits_15m": 1,
-      "edits_1h": 1,
-      "detected_at": "2026-06-12T08:07:52.304329+00:00"
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140691+00:00"
+    },
+    {
+      "article": "2026 FIA World Endurance Championship",
+      "article_url": "https://en.wikipedia.org/wiki/2026 FIA World Endurance Championship",
+      "tier": "med",
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140696+00:00"
+    },
+    {
+      "article": "2026 FIBA U18 Women's AmeriCup",
+      "article_url": "https://en.wikipedia.org/wiki/2026 FIBA U18 Women's AmeriCup",
+      "tier": "med",
+      "edits_15m": 0,
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140701+00:00"
     },
     {
       "article": "2026 FIFA World Cup",
@@ -121,23 +161,15 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304335+00:00"
+      "detected_at": "2026-06-15T07:58:33.140708+00:00"
     },
     {
-      "article": "2026 FIFA World Cup Group A",
-      "article_url": "https://en.wikipedia.org/wiki/2026 FIFA World Cup Group A",
-      "tier": "high",
-      "edits_15m": 1,
-      "edits_1h": 1,
-      "detected_at": "2026-06-12T08:07:52.304347+00:00"
-    },
-    {
-      "article": "2026 FIFA World Cup broadcasting rights",
-      "article_url": "https://en.wikipedia.org/wiki/2026 FIFA World Cup broadcasting rights",
+      "article": "2026 FIFA World Cup Group E",
+      "article_url": "https://en.wikipedia.org/wiki/2026 FIFA World Cup Group E",
       "tier": "med",
       "edits_15m": 0,
-      "edits_1h": 1,
-      "detected_at": "2026-06-12T08:07:52.304357+00:00"
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140712+00:00"
     },
     {
       "article": "2026 FIVB Men's Volleyball Nations League",
@@ -145,63 +177,47 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304367+00:00"
+      "detected_at": "2026-06-15T07:58:33.140717+00:00"
     },
     {
-      "article": "2026 German Masters",
-      "article_url": "https://en.wikipedia.org/wiki/2026 German Masters",
+      "article": "2026 Georgia gubernatorial election",
+      "article_url": "https://en.wikipedia.org/wiki/2026 Georgia gubernatorial election",
       "tier": "med",
       "edits_15m": 0,
-      "edits_1h": 10,
-      "detected_at": "2026-06-12T08:07:52.304374+00:00"
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140721+00:00"
+    },
+    {
+      "article": "2026 German Football League",
+      "article_url": "https://en.wikipedia.org/wiki/2026 German Football League",
+      "tier": "med",
+      "edits_15m": 0,
+      "edits_1h": 3,
+      "detected_at": "2026-06-15T07:58:33.140727+00:00"
+    },
+    {
+      "article": "2026 Internazionali Femminili di Brescia \u2013 Singles",
+      "article_url": "https://en.wikipedia.org/wiki/2026 Internazionali Femminili di Brescia \u2013 Singles",
+      "tier": "med",
+      "edits_15m": 0,
+      "edits_1h": 4,
+      "detected_at": "2026-06-15T07:58:33.140734+00:00"
     },
     {
       "article": "2026 Iran war",
       "article_url": "https://en.wikipedia.org/wiki/2026 Iran war",
       "tier": "high",
       "edits_15m": 0,
-      "edits_1h": 10,
-      "detected_at": "2026-06-12T08:07:52.304384+00:00"
+      "edits_1h": 0,
+      "detected_at": "2026-06-15T07:58:33.140740+00:00"
     },
     {
-      "article": "2026 Iranian diaspora protests",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Iranian diaspora protests",
-      "tier": "med",
-      "edits_15m": 7,
-      "edits_1h": 12,
-      "detected_at": "2026-06-12T08:07:52.304393+00:00"
-    },
-    {
-      "article": "2026 Italian local elections",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Italian local elections",
-      "tier": "med",
+      "article": "2026 NASCAR Cup Series",
+      "article_url": "https://en.wikipedia.org/wiki/2026 NASCAR Cup Series",
+      "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304399+00:00"
-    },
-    {
-      "article": "2026 Labour Party leadership crisis",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Labour Party leadership crisis",
-      "tier": "med",
-      "edits_15m": 0,
-      "edits_1h": 3,
-      "detected_at": "2026-06-12T08:07:52.304407+00:00"
-    },
-    {
-      "article": "2026 Los Angeles elections",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Los Angeles elections",
-      "tier": "med",
-      "edits_15m": 0,
-      "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304412+00:00"
-    },
-    {
-      "article": "2026 Mindanao earthquake",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Mindanao earthquake",
-      "tier": "med",
-      "edits_15m": 1,
-      "edits_1h": 2,
-      "detected_at": "2026-06-12T08:07:52.304418+00:00"
+      "detected_at": "2026-06-15T07:58:33.140744+00:00"
     },
     {
       "article": "2026 NBA Finals",
@@ -209,39 +225,23 @@
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 2,
-      "detected_at": "2026-06-12T08:07:52.304428+00:00"
+      "detected_at": "2026-06-15T07:58:33.140755+00:00"
     },
     {
-      "article": "2026 Newcastle City Council election",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Newcastle City Council election",
+      "article": "2026 NBA playoffs",
+      "article_url": "https://en.wikipedia.org/wiki/2026 NBA playoffs",
       "tier": "med",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304433+00:00"
+      "detected_at": "2026-06-15T07:58:33.140762+00:00"
     },
     {
-      "article": "2026 North Dakota House of Representatives election",
-      "article_url": "https://en.wikipedia.org/wiki/2026 North Dakota House of Representatives election",
-      "tier": "med",
-      "edits_15m": 0,
-      "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304442+00:00"
-    },
-    {
-      "article": "2026 Northern Ireland riots",
-      "article_url": "https://en.wikipedia.org/wiki/2026 Northern Ireland riots",
-      "tier": "high",
-      "edits_15m": 3,
-      "edits_1h": 5,
-      "detected_at": "2026-06-12T08:07:52.304448+00:00"
-    },
-    {
-      "article": "2026 PDC World Cup of Darts",
-      "article_url": "https://en.wikipedia.org/wiki/2026 PDC World Cup of Darts",
+      "article": "2026 NCAA Division I baseball tournament",
+      "article_url": "https://en.wikipedia.org/wiki/2026 NCAA Division I baseball tournament",
       "tier": "high",
       "edits_15m": 0,
       "edits_1h": 0,
-      "detected_at": "2026-06-12T08:07:52.304453+00:00"
+      "detected_at": "2026-06-15T07:58:33.140768+00:00"
     }
   ]
 }
