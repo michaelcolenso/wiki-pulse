@@ -133,18 +133,21 @@ def classify_article_type(description, extract):
 def build_cluster_context(article, all_spikes, summaries):
     """Build a brief context string of other articles spiking in the same cluster today.
 
-    Uses description and extract text to find related articles sharing teams,
-    leagues, events, or proper nouns.
+    Uses description + extract + article title to find related articles sharing
+    teams, leagues, events, or proper nouns.
     """
     this_summary = summaries.get(article, {})
-    this_text = (this_summary.get("description", "") + " " + this_summary.get("extract", "")).lower()
+    this_body = (this_summary.get("description", "") + " " + this_summary.get("extract", "")).lower()
+    # Also use article title for entity extraction (catches cases where extract is sparse)
+    # Do NOT lowercase the title — we need original case for proper noun detection
+    this_title_text = article + " " + this_body
 
     # Extract proper nouns and known acronyms
     this_entities = set()
-    for term in this_text.split():
+    for term in this_title_text.split():
         if term[0].isupper() and len(term) > 3:
             this_entities.add(term.lower())
-    for match in re.findall(r'\b(NBA|NFL|MLB|NHL|EPL|UFC|WWE|FIFA|UEFA|F1|WBC|ICC)\b', this_text, re.IGNORECASE):
+    for match in re.findall(r'\b(NBA|NFL|MLB|NHL|EPL|UFC|WWE|FIFA|UEFA|F1|WBC|ICC)\b', this_title_text, re.IGNORECASE):
         this_entities.add(match.lower())
 
     related = []
@@ -153,13 +156,14 @@ def build_cluster_context(article, all_spikes, summaries):
         if other == article:
             continue
         other_summary = summaries.get(other, {})
-        other_text = (other_summary.get("description", "") + " " + other_summary.get("extract", "")).lower()
+        other_body = (other_summary.get("description", "") + " " + other_summary.get("extract", "")).lower()
+        other_title_text = other + " " + other_body
 
         other_entities = set()
-        for term in other_text.split():
+        for term in other_title_text.split():
             if term[0].isupper() and len(term) > 3:
                 other_entities.add(term.lower())
-        for match in re.findall(r'\b(NBA|NFL|MLB|NHL|EPL|UFC|WWE|FIFA|UEFA|F1|WBC|ICC)\b', other_text, re.IGNORECASE):
+        for match in re.findall(r'\b(NBA|NFL|MLB|NHL|EPL|UFC|WWE|FIFA|UEFA|F1|WBC|ICC)\b', other_title_text, re.IGNORECASE):
             other_entities.add(match.lower())
 
         shared = this_entities & other_entities
