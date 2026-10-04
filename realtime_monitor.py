@@ -3,6 +3,8 @@
 detects edit bursts that precede pageview spikes."""
 
 import json
+import os
+import re
 import sqlite3
 import signal
 import sys
@@ -12,6 +14,60 @@ from datetime import datetime, timezone
 from pathlib import Path
 from threading import Lock, Thread
 from urllib.request import Request, urlopen
+
+# Push realtime.json to Cloudflare KV so the WikiPulse Worker serves fresh
+# data without a local server/tunnel. Rate-limited — see push_realtime_to_kv().
+CF_ACCOUNT_ID = "4e921a01da1f55b0ddb32bb38a5524ce"
+CF_KV_NAMESPACE_ID = "d4d6baa7f7f34eb8bed82c6ffded14db"
+_kv_push_min_interval = 20  # seconds between KV pushes (SSE events can be rapid)
+_last_kv_push = 0.0
+_cf_token_cache: str | None = None
+
+
+def _read_cf_token() -> str | None:
+    global _cf_token_cache
+    if _cf_token_cache is not None:
+        return _cf_token_cache
+    cfg_path = os.path.expanduser("~/.hermes/config.yaml")
+    try:
+        with open(cfg_path, encoding="utf-8") as fh:
+            for line in fh:
+                m = re.search(r"Authorization:\s*Bearer\s+(\S+)", line)
+                if m:
+                    _cf_token_cache = m.group(1).strip().strip('"').strip("'")
+                    return _cf_token_cache
+    except OSError:
+        pass
+    return None
+
+
+def push_realtime_to_kv(payload: dict) -> None:
+    """Best-effort push of realtime.json to Cloudflare KV. Never raises —
+    a failed push just means the dashboard serves slightly stale data until
+    the next successful push; it must not crash the SSE listener."""
+    global _last_kv_push
+    now = time.time()
+    if now - _last_kv_push < _kv_push_min_interval:
+        return
+    token = _read_cf_token()
+    if not token:
+        return
+    try:
+        body = json.dumps(payload, indent=2).encode("utf-8")
+        url = (
+            f"https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT_ID}"
+            f"/storage/kv/namespaces/{CF_KV_NAMESPACE_ID}/values/realtime.json"
+        )
+        req = Request(
+            url,
+            data=body,
+            headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=utf-8"},
+            method="PUT",
+        )
+        urlopen(req, timeout=10).read()
+        _last_kv_push = now
+    except Exception as exc:  # noqa: BLE001 — must never kill the listener
+        print(f"WARN: KV push failed: {exc}", file=sys.stderr, flush=True)
 
 PROJECT_DIR = Path(__file__).parent
 DB_PATH = PROJECT_DIR / "data" / "pageviews.db"
@@ -159,6 +215,8 @@ def write_realtime_json():
     
     with open(REALTIME_JSON, "w") as f:
         json.dump(payload, f, indent=2)
+
+    push_realtime_to_kv(payload)
 
 
 def flush_to_db(db, batch):
