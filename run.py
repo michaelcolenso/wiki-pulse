@@ -37,6 +37,10 @@ def main():
     
     if not run_step("CONTEXT", ["context.py"]):
         success = False
+
+    # Publish refreshed dashboard data to Cloudflare KV — the Worker serves
+    # from KV, not from this disk, so nothing is live until this runs.
+    run_step("PUBLISH", ["push_to_kv.py", "spikes.json", "history.json", "context-data.json"])
     
     spikes_json = PROJECT_DIR / "dashboard" / "spikes.json"
     if spikes_json.exists():

@@ -1,0 +1,11 @@
+name = "wikipulse"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+
+[[kv_namespaces]]
+binding = "DATA"
+id = "d4d6baa7f7f34eb8bed82c6ffded14db"
+preview_id = "b9a2783f14de498aa47a86f6878b38d6"
+
+[observability]
+enabled = true
