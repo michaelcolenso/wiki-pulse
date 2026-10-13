@@ -17,25 +17,34 @@ SPIKE_THRESHOLD_LOW = 3.0      # "Notable" spike (3x baseline)
 SPIKE_THRESHOLD_MED = 8.0      # "Big" spike (8x baseline)
 SPIKE_THRESHOLD_HIGH = 25.0    # "Massive" spike (25x baseline)
 MIN_SPIKE_VIEWS = 2000         # Minimum absolute views to be considered a spike
-MIN_SAMPLE_DAYS = 3            # Minimum data points needed to establish a baseline
-LOW_SAMPLE_MULTIPLIER = 5.0    # For sparse articles (<14 data pts), use higher threshold
+MIN_SAMPLE_DAYS = 3            # Minimum data points for a standard 30-day baseline
+LOW_SAMPLE_MULTIPLIER = 5.0    # For sparse low-volume articles (<14 data pts, <10k base), use higher threshold
+HIGH_BASELINE_FLOOR = 10000    # Baselines >=10k are already in the global top-1000; 3.0x is a real surge
+NEW_ENTRANT_MAX_RANK = 100     # Admit new entrants (<3 prior days) if they break into the global top 100
+NEW_ENTRANT_MIN_VIEWS = 30000  # ...or clear 30,000 daily views
+NEW_ENTRANT_MULTIPLIER = 4.0   # Brand-new entrants (0 prior days) must clear 4x the top-1000 daily floor
 
 
 def get_db():
     return sqlite3.connect(str(DB_PATH))
 
 
-def compute_baselines(db):
-    """Update baseline statistics for all articles with recent data."""
-    today = date.today()
-    cutoff_90d = (today - timedelta(days=90)).isoformat()
-    cutoff_30d = (today - timedelta(days=30)).isoformat()
+def compute_baselines(db, target_date=None):
+    """Update baseline statistics for all articles with data strictly prior to target_date."""
+    if target_date is None:
+        ref = date.today() - timedelta(days=1)
+    else:
+        ref = date.fromisoformat(target_date)
+    target_iso = ref.isoformat()
+    cutoff_90d = (ref - timedelta(days=90)).isoformat()
+    cutoff_30d = (ref - timedelta(days=30)).isoformat()
     now_iso = datetime.now().isoformat()
     
     db.execute("DELETE FROM baselines")
     
-    # Use simple averages (not median) — SQLite median via OFFSET is too slow at scale.
-    # For spike detection, mean is good enough at this stage.
+    # Exclude target_date (< target_iso) so a one-day spike does not inflate its own
+    # denominator, and keep articles with >=1 prior appearance so sparse/new-entrant
+    # articles still have their prior average recorded alongside sample_count_30d.
     db.execute("""
         INSERT INTO baselines (article, avg_30d, avg_90d, median_30d, median_90d, 
                                 max_90d, sample_count_30d, sample_count_90d, last_updated)
@@ -50,12 +59,31 @@ def compute_baselines(db):
             COUNT(CASE WHEN date >= ? THEN 1 END),
             ?
         FROM daily_views dv
-        WHERE date >= ?
+        WHERE date >= ? AND date < ?
         GROUP BY article
-        HAVING COUNT(CASE WHEN date >= ? THEN 1 END) >= 3
-    """, (cutoff_30d, cutoff_90d, cutoff_90d, cutoff_30d, cutoff_90d, now_iso, cutoff_90d, cutoff_30d))
+    """, (cutoff_30d, cutoff_90d, cutoff_90d, cutoff_30d, cutoff_90d, now_iso, cutoff_90d, target_iso))
     
     db.commit()
+
+
+def get_top1000_floor(db, target_date):
+    """Average #1000 daily view count over the 30 days preceding target_date.
+
+    Any article absent from the prior top-1000 had daily views below this ceiling,
+    so it serves as a conservative upper-bound baseline for brand-new entrants.
+    """
+    ref = date.fromisoformat(target_date)
+    cutoff_30d = (ref - timedelta(days=30)).isoformat()
+    row = db.execute("""
+        SELECT ROUND(AVG(min_views), 1)
+        FROM (
+            SELECT date, MIN(views) AS min_views
+            FROM daily_views
+            WHERE date >= ? AND date < ?
+            GROUP BY date
+        )
+    """, (cutoff_30d, target_date)).fetchone()
+    return float(row[0]) if row and row[0] else 8000.0
 
 
 def detect_spikes(db, target_date=None):
@@ -66,7 +94,9 @@ def detect_spikes(db, target_date=None):
     # Delete existing spikes for this date
     db.execute("DELETE FROM daily_spikes WHERE date = ?", (target_date,))
     
-    # Find articles with anomalous views compared to their 30-day baseline
+    top1000_floor = get_top1000_floor(db, target_date)
+    
+    # Pull candidate articles for target_date, including new entrants with no prior baseline row
     rows = db.execute("""
         SELECT 
             dv.article,
@@ -75,25 +105,35 @@ def detect_spikes(db, target_date=None):
             b.avg_30d,
             b.avg_90d,
             b.max_90d,
-            b.sample_count_30d,
-            ROUND(CAST(dv.views AS REAL) / NULLIF(b.avg_30d, 0), 1) as spikex
+            COALESCE(b.sample_count_30d, 0) as sample_count_30d,
+            COALESCE(b.sample_count_90d, 0) as sample_count_90d
         FROM daily_views dv
         LEFT JOIN baselines b ON dv.article = b.article
         WHERE dv.date = ?
           AND dv.views >= ?
-          AND b.avg_30d IS NOT NULL
-          AND b.avg_30d >= ?
-        ORDER BY spikex DESC NULLS LAST
-    """, (target_date, MIN_SPIKE_VIEWS, MIN_BASELINE_VIEWS))
+    """, (target_date, MIN_SPIKE_VIEWS)).fetchall()
     
     spikes = []
-    for article, views, rank, avg_30d, avg_90d, max_90d, samples, spike_score in rows:
-        if spike_score is None or spike_score < SPIKE_THRESHOLD_LOW:
-            continue
+    for article, views, rank, avg_30d, avg_90d, max_90d, samples_30d, samples_90d in rows:
+        if samples_30d >= MIN_SAMPLE_DAYS and avg_30d is not None and avg_30d >= MIN_BASELINE_VIEWS:
+            effective_baseline = float(avg_30d)
+            # Only apply the 5.0x sparse-sample penalty when the baseline is small (<10k)
+            # and absolute views are below 50k; established top-1000 pages (like holiday or
+            # major figure pages) surging 3x+ to tens of thousands of views are real spikes.
+            if samples_30d < 14 and effective_baseline < HIGH_BASELINE_FLOOR and views < 50000:
+                min_multiple = LOW_SAMPLE_MULTIPLIER
+            else:
+                min_multiple = SPIKE_THRESHOLD_LOW
+        else:
+            # New entrant (<3 appearances in prior 30-day top-1000): admit only if it breaks
+            # into the global top 100 or clears 30,000 views.
+            if (rank is None or rank > NEW_ENTRANT_MAX_RANK) and views < NEW_ENTRANT_MIN_VIEWS:
+                continue
+            effective_baseline = max(float(avg_30d or 0), float(avg_90d or 0), top1000_floor)
+            min_multiple = SPIKE_THRESHOLD_LOW if (samples_30d >= 1 or samples_90d >= 1) else NEW_ENTRANT_MULTIPLIER
         
-        # For articles with sparse history (<14 data points), require a stronger signal
-        # to avoid false positives from small sample sizes
-        if samples < 14 and spike_score < LOW_SAMPLE_MULTIPLIER:
+        spike_score = round(views / effective_baseline, 1)
+        if spike_score < min_multiple:
             continue
         
         tier = "low"
@@ -110,11 +150,13 @@ def detect_spikes(db, target_date=None):
             "rank": rank,
             "spike_multiple": spike_score,
             "spike_tier": tier,
-            "baseline_30d": int(avg_30d),
-            "baseline_90d": int(avg_90d) if avg_90d else None,
+            "baseline_30d": int(round(effective_baseline)),
+            "baseline_90d": int(round(avg_90d)) if avg_90d else None,
             "max_90d": max_90d,
-            "sample_days": samples,
+            "sample_days": samples_30d,
         })
+    
+    spikes.sort(key=lambda s: (s["spike_multiple"], s["views"]), reverse=True)
     
     # Insert into daily_spikes table
     if spikes:
@@ -177,17 +219,14 @@ def main():
     target_date = None
     if len(sys.argv) > 1:
         target_date = sys.argv[1]  # YYYY-MM-DD
+    else:
+        target_date = (date.today() - timedelta(days=1)).isoformat()
     
     print("Computing baselines...")
-    compute_baselines(db)
+    compute_baselines(db, target_date)
     
     print("Detecting spikes...")
-    if target_date:
-        spikes = detect_spikes(db, target_date)
-    else:
-        yesterday = (date.today() - timedelta(days=1)).isoformat()
-        spikes = detect_spikes(db, yesterday)
-        target_date = yesterday
+    spikes = detect_spikes(db, target_date)
     
     # Group by tier
     high = [s for s in spikes if s["spike_tier"] == "high"]
